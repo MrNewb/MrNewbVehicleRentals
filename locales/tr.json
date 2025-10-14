@@ -1,0 +1,13 @@
+{
+	"RentalMenus": {
+		"TitleDescription": "Kiralamak için bir araç seçin.",
+		"MenuDescription": "$%s karşılığında bir %s kiralayın.",
+		"ReturnTitle": "Aracı İade Et",
+		"ReturnDescription": "%s plakalı kiralık aracınızı iade edin.",
+		"ReturnNoVehicle": "İade edecek kiralık aracınız yok.",
+		"ReturnToFar": "İade etmek için kiralama istasyonundan çok uzaktasınız.",
+		"PaperWorkItem": "%s'den %s plakalı %s için kiralama evrakları, %s'e sağlandı.",
+		"NoSpawn": "Boş alan yok, lütfen onları hareket ettirin ve tekrar deneyin.",
+		"NoMoney": "Bu aracı kiralamak için yeterli paranız yok."
+	}
+}

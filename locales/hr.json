@@ -1,0 +1,13 @@
+{
+	"RentalMenus": {
+		"TitleDescription": "Odaberite vozilo za najam.",
+		"MenuDescription": "Unajmite %s za $%s.",
+		"ReturnTitle": "Vrati vozilo",
+		"ReturnDescription": "Vratite svoje unajmljeno vozilo s tablicom %s.",
+		"ReturnNoVehicle": "Nemate unajmljeno vozilo za vratiti.",
+		"ReturnToFar": "Predaleko ste od postaje za najam da biste ga vratili.",
+		"PaperWorkItem": "Papiri o najmu od %s za %s s tablicom %s, dostavljeni %s.",
+		"NoSpawn": "Nema slobodnih mjesta, molimo pomaknite ih i pokušajte ponovno.",
+		"NoMoney": "Nemate dovoljno novca za najam ovog vozila."
+	}
+}

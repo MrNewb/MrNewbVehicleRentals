@@ -1,0 +1,13 @@
+{
+	"RentalMenus": {
+		"TitleDescription": "Válasszon ki egy bérelni kívánt járművet.",
+		"MenuDescription": "Béreljen egy %s-t $%s-ért.",
+		"ReturnTitle": "Jármű visszavitele",
+		"ReturnDescription": "Vigye vissza bérelt járművét %s rendszámmal.",
+		"ReturnNoVehicle": "Nincs bérelt járműve a visszavitelhez.",
+		"ReturnToFar": "Túl messze van a bérlőállomástól ahhoz, hogy visszavigye.",
+		"PaperWorkItem": "Bérleti papírok %s-tól egy %s számára %s rendszámmal, kiadva %s részére.",
+		"NoSpawn": "Nincsenek szabad helyek, kérjük mozgassa el őket és próbálja újra.",
+		"NoMoney": "Nincs elég pénze ennek a járműnek a bérléséhez."
+	}
+}

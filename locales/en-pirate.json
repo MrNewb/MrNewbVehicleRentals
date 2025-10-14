@@ -1,0 +1,13 @@
+{
+	"RentalMenus": {
+		"TitleDescription": "Choose yer vessel to rent, ye scallywag!",
+		"MenuDescription": "Rent a %s fer $%s doubloons, arrr!",
+		"ReturnTitle": "Return yer Ship",
+		"ReturnDescription": "Return yer rented vessel with flag %s, matey.",
+		"ReturnNoVehicle": "Ye don't be havin' a rented ship to return, landlubber!",
+		"ReturnToFar": "Ye be too far from the dock to return it, savvy?",
+		"PaperWorkItem": "Ship papers from %s fer a %s with flag %s, given to %s, arrr!",
+		"NoSpawn": "No berths be clear, move 'em and try again, ye scurvy dog!",
+		"NoMoney": "Ye don't be havin' enough doubloons to rent this vessel, arrr!"
+	}
+}

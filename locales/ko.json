@@ -1,0 +1,13 @@
+{
+	"RentalMenus": {
+		"TitleDescription": "렌탈할 차량을 선택하세요.",
+		"MenuDescription": "%s를 $%s에 렌탈하세요.",
+		"ReturnTitle": "차량 반납",
+		"ReturnDescription": "번호판 %s가 있는 렌탈 차량을 반납하세요.",
+		"ReturnNoVehicle": "반납할 렌탈 차량이 없습니다.",
+		"ReturnToFar": "렌탈 스테이션에서 너무 멀어서 반납할 수 없습니다.",
+		"PaperWorkItem": "%s에서 번호판 %s가 있는 %s에 대한 렌탈 서류, %s에게 제공됨.",
+		"NoSpawn": "빈 공간이 없습니다. 차량을 이동시키고 다시 시도하세요.",
+		"NoMoney": "이 차량을 렌탈할 충분한 돈이 없습니다."
+	}
+}

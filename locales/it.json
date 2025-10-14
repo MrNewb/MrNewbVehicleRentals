@@ -1,0 +1,13 @@
+{
+	"RentalMenus": {
+		"TitleDescription": "Seleziona un veicolo da noleggiare.",
+		"MenuDescription": "Noleggia un %s per $%s.",
+		"ReturnTitle": "Restituisci veicolo",
+		"ReturnDescription": "Restituisci il tuo veicolo noleggiato con targa %s.",
+		"ReturnNoVehicle": "Non hai un veicolo noleggiato da restituire.",
+		"ReturnToFar": "Sei troppo lontano dalla stazione di noleggio per restituirlo.",
+		"PaperWorkItem": "Documenti di noleggio da %s per un %s con targa %s, forniti a %s.",
+		"NoSpawn": "Nessuno spazio libero, per favore spostali e riprova.",
+		"NoMoney": "Non hai abbastanza soldi per noleggiare questo veicolo."
+	}
+}

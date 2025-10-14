@@ -1,0 +1,13 @@
+{
+	"RentalMenus": {
+		"TitleDescription": "选择要租赁的车辆。",
+		"MenuDescription": "以$%s租赁一辆%s。",
+		"ReturnTitle": "归还车辆",
+		"ReturnDescription": "归还您租赁的车牌号为%s的车辆。",
+		"ReturnNoVehicle": "您没有租赁的车辆可以归还。",
+		"ReturnToFar": "您距离租赁站太远，无法归还。",
+		"PaperWorkItem": "来自%s的租赁文件，车牌号为%s的%s，提供给%s。",
+		"NoSpawn": "没有空闲位置，请移动它们并重试。",
+		"NoMoney": "您没有足够的钱来租赁这辆车。"
+	}
+}

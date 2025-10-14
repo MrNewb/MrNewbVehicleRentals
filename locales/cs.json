@@ -1,0 +1,13 @@
+{
+	"RentalMenus": {
+		"TitleDescription": "Vyberte vozidlo k pronájmu.",
+		"MenuDescription": "Pronajmout %s za $%s.",
+		"ReturnTitle": "Vrátit vozidlo",
+		"ReturnDescription": "Vrátit vaše pronajmuté vozidlo s SPZ %s.",
+		"ReturnNoVehicle": "Nemáte žádné pronajmuté vozidlo k vrácení.",
+		"ReturnToFar": "Jste příliš daleko od půjčovny, abyste ji mohli vrátit.",
+		"PaperWorkItem": "Dokumenty o pronájmu z %s pro %s s SPZ %s, poskytnuté %s.",
+		"NoSpawn": "Žádná místa nejsou volná, prosím přesuňte je a zkuste to znovu.",
+		"NoMoney": "Nemáte dostatek peněz na pronájem tohoto vozidla."
+	}
+}

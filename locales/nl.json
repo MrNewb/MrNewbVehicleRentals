@@ -1,0 +1,13 @@
+{
+	"RentalMenus": {
+		"TitleDescription": "Selecteer een voertuig om te huren.",
+		"MenuDescription": "Huur een %s voor $%s.",
+		"ReturnTitle": "Voertuig terugbrengen",
+		"ReturnDescription": "Breng uw gehuurde voertuig met kenteken %s terug.",
+		"ReturnNoVehicle": "U heeft geen gehuurd voertuig om terug te brengen.",
+		"ReturnToFar": "U bent te ver van het verhuurstation om het terug te brengen.",
+		"PaperWorkItem": "Huurpapieren van %s voor een %s met kenteken %s, verstrekt aan %s.",
+		"NoSpawn": "Geen vrije ruimtes, verplaats ze alstublieft en probeer opnieuw.",
+		"NoMoney": "U heeft niet genoeg geld om dit voertuig te huren."
+	}
+}

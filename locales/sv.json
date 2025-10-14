@@ -1,0 +1,13 @@
+{
+	"RentalMenus": {
+		"TitleDescription": "Välj ett fordon att hyra.",
+		"MenuDescription": "Hyr en %s för $%s.",
+		"ReturnTitle": "Lämna tillbaka fordon",
+		"ReturnDescription": "Lämna tillbaka ditt hyrda fordon med registreringsnummer %s.",
+		"ReturnNoVehicle": "Du har inget hyrt fordon att lämna tillbaka.",
+		"ReturnToFar": "Du är för långt bort från hyrstationen för att lämna tillbaka det.",
+		"PaperWorkItem": "Hyrpapper från %s för en %s med registreringsnummer %s, utfärdade till %s.",
+		"NoSpawn": "Inga lediga platser, flytta dem och försök igen.",
+		"NoMoney": "Du har inte tillräckligt med pengar för att hyra detta fordon."
+	}
+}

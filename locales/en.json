@@ -1,0 +1,13 @@
+{
+	"RentalMenus": {
+		"TitleDescription": "Select a vehicle to rent.",
+		"MenuDescription": "Rent a %s for $%s.",
+		"ReturnTitle": "Return Vehicle",
+		"ReturnDescription": "Return your rented vehicle with plate %s.",
+		"ReturnNoVehicle": "You do not have a rented vehicle to return.",
+		"ReturnToFar": "You are too far away from the rental station to return it.",
+		"PaperWorkItem": "Rental Paperwork from %s for a %s with plate %s, provided to %s.",
+		"NoSpawn": "No spaces clear, please move them and try again.",
+		"NoMoney": "You do not have enough money to rent this vehicle."
+	}
+}

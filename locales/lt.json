@@ -1,0 +1,13 @@
+{
+	"RentalMenus": {
+		"TitleDescription": "Pasirinkite automobilį nuomai.",
+		"MenuDescription": "Išsinuomokite %s už $%s.",
+		"ReturnTitle": "Grąžinti automobilį",
+		"ReturnDescription": "Grąžinkite savo nuomotą automobilį su numeriu %s.",
+		"ReturnNoVehicle": "Neturite nuomoto automobilio grąžinimui.",
+		"ReturnToFar": "Esate per toli nuo nuomos stoties, kad galėtumėte jį grąžinti.",
+		"PaperWorkItem": "Nuomos dokumentai iš %s automobiliui %s su numeriu %s, pateikti %s.",
+		"NoSpawn": "Nėra laisvų vietų, prašome juos perkelti ir bandyti dar kartą.",
+		"NoMoney": "Neturite pakankamai pinigų šiam automobiliui išsinuomoti."
+	}
+}

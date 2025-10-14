@@ -1,0 +1,13 @@
+{
+	"RentalMenus": {
+		"TitleDescription": "Wählen Sie ein Fahrzeug zum Mieten aus.",
+		"MenuDescription": "Mieten Sie einen %s für $%s.",
+		"ReturnTitle": "Fahrzeug zurückgeben",
+		"ReturnDescription": "Geben Sie Ihr gemietetes Fahrzeug mit Kennzeichen %s zurück.",
+		"ReturnNoVehicle": "Sie haben kein gemietetes Fahrzeug zum Zurückgeben.",
+		"ReturnToFar": "Sie sind zu weit von der Mietstation entfernt, um es zurückzugeben.",
+		"PaperWorkItem": "Mietpapiere von %s für einen %s mit Kennzeichen %s, ausgestellt an %s.",
+		"NoSpawn": "Keine Plätze frei, bitte bewegen Sie sie und versuchen Sie es erneut.",
+		"NoMoney": "Sie haben nicht genug Geld, um dieses Fahrzeug zu mieten."
+	}
+}

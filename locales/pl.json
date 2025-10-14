@@ -1,0 +1,13 @@
+{
+	"RentalMenus": {
+		"TitleDescription": "Wybierz pojazd do wynajęcia.",
+		"MenuDescription": "Wynajmij %s za $%s.",
+		"ReturnTitle": "Zwróć pojazd",
+		"ReturnDescription": "Zwróć swój wynajęty pojazd z tablicą %s.",
+		"ReturnNoVehicle": "Nie masz wynajętego pojazdu do zwrotu.",
+		"ReturnToFar": "Jesteś za daleko od stacji wypożyczalni, aby go zwrócić.",
+		"PaperWorkItem": "Dokumenty wynajmu z %s dla %s z tablicą %s, dostarczone dla %s.",
+		"NoSpawn": "Brak wolnych miejsc, przesuń je i spróbuj ponownie.",
+		"NoMoney": "Nie masz wystarczająco pieniędzy, aby wynająć ten pojazd."
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"RentalMenus": {
+		"TitleDescription": "レンタルする車両を選択してください。",
+		"MenuDescription": "%sを$%sでレンタルします。",
+		"ReturnTitle": "車両を返却",
+		"ReturnDescription": "プレート番号%sのレンタル車両を返却してください。",
+		"ReturnNoVehicle": "返却するレンタル車両がありません。",
+		"ReturnToFar": "レンタルステーションから遠すぎて返却できません。",
+		"PaperWorkItem": "%sからのレンタル書類、プレート番号%sの%s、%sに提供。",
+		"NoSpawn": "空きスペースがありません。車両を移動してから再試行してください。",
+		"NoMoney": "この車両をレンタルするのに十分なお金がありません。"
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"RentalMenus": {
+		"TitleDescription": "Valitse vuokrattava ajoneuvo.",
+		"MenuDescription": "Vuokraa %s hintaan $%s.",
+		"ReturnTitle": "Palauta ajoneuvo",
+		"ReturnDescription": "Palauta vuokraamasi ajoneuvo rekisteritunnuksella %s.",
+		"ReturnNoVehicle": "Sinulla ei ole vuokrattua ajoneuvoa palautettavaksi.",
+		"ReturnToFar": "Olet liian kaukana vuokrausasemasta palauttaaksesi sen.",
+		"PaperWorkItem": "Vuokrausasiakirjat kohteesta %s ajoneuvolle %s rekisteritunnuksella %s, toimitettu henkilölle %s.",
+		"NoSpawn": "Ei vapaita tiloja, siirrä ne ja yritä uudelleen.",
+		"NoMoney": "Sinulla ei ole tarpeeksi rahaa vuokrataksesi tämän ajoneuvon."
+	}
+}
