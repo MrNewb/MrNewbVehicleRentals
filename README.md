@@ -1,6 +1,7 @@
 # 🚗 MrNewb Vehicle Rentals
 
 A comprehensive vehicle rental system for FiveM servers featuring cars, boats, and expandable support for any vehicle type. Built with clean architecture utilizing Lua metatables for enhanced code organization and performance.
+![mrnewbvehiclerentals (2)](https://github.com/user-attachments/assets/322ce3b4-e62e-4770-9853-3b3dced93aab)
 
 ## 🌟 Features
 
