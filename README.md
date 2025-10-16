@@ -60,6 +60,9 @@ Check out our other premium scripts:
 
 **[MrNewb Scripts Store](https://mrnewbscripts.tebex.io/)**
 
+# Preview
+**[Youtube](https://www.youtube.com/watch?v=uJylvMP8_PY)**
+
 ---
 
 **Made with ❤️ by MrNewb Scripts**
