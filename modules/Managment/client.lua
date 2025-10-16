@@ -85,9 +85,6 @@ local function returnVehicleMenuOptions(id)
                     local foundData = checkForMatchedPlate(v.metadata.plate)
                     if not foundData then return Bridge.Notify.SendNotify(locale("RentalMenus.ReturnNoVehicle"), "error", 3000) end
                     Bridge.VehicleKey.RemoveKeys(NetworkGetEntityFromNetworkId(foundData), v.metadata.plate)
-                    print(v.metadata.plate)
-                    print(foundData)
-                    print(v.slot)
                     TriggerServerEvent("MrNewbVehicleRentals:Server:ReturnVehicle", id, v.metadata.plate, foundData, v.slot)
                 end
             })
