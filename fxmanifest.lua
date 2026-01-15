@@ -3,7 +3,7 @@ game 'gta5'
 lua54 'yes'
 author 'MrNewb'
 description 'A vehicle rental system for FiveM by MrNewb. Utilizing Lua metatables for practice and enhanced code organization.'
-version '0.0.2'
+version '0.0.3'
 
 shared_scripts {
 	'core/init.lua',

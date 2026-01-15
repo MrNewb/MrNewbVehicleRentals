@@ -27,7 +27,7 @@ function ManagmentClass:register()
         model = self.model,
         coords = self.position,
         heading = self.position.w,
-        spawnDistance = 100,
+        spawnDistance = 100.0,
         OnSpawn = function(entityData)
             SetEntityInvincible(entityData.spawned, true)
             FreezeEntityPosition(entityData.spawned, true)
@@ -61,10 +61,14 @@ end
 
 local function checkForMatchedPlate(plate)
     local vehicles = GetGamePool('CVehicle')
+    local pedCoords = GetEntityCoords(PlayerPedId())
     for i = 1, #vehicles do
         local vehicle = vehicles[i]
         local vehPlate = GetVehicleNumberPlateText(vehicle)
         if vehPlate == plate then
+            if pedCoords and #(pedCoords - GetEntityCoords(vehicle)) > 100.0 then
+                return false
+            end
             return NetworkGetNetworkIdFromEntity(vehicle)
         end
     end
@@ -72,25 +76,31 @@ local function checkForMatchedPlate(plate)
 end
 
 local function returnVehicleMenuOptions(id)
+    -- kinda jank, dont care.
     local inventory = Bridge.Inventory.GetPlayerInventory()
-    local matchedItems = {}
+    local returnMenuOptions = {}
     for k, v in pairs(inventory) do
-        if v.name == "rental_paperwork" and v.metadata and v.metadata.plate then
-        table.insert(matchedItems, {
-                title = locale("RentalMenus.ReturnTitle"),
-                description = locale("RentalMenus.ReturnDescription", v.metadata.plate),
-                icon = "fa-solid fa-car",
-                iconColor = "red",
-                onSelect = function()
-                    local foundData = checkForMatchedPlate(v.metadata.plate)
-                    if not foundData then return Bridge.Notify.SendNotify(locale("RentalMenus.ReturnNoVehicle"), "error", 3000) end
-                    Bridge.VehicleKey.RemoveKeys(NetworkGetEntityFromNetworkId(foundData), v.metadata.plate)
-                    TriggerServerEvent("MrNewbVehicleRentals:Server:ReturnVehicle", id, v.metadata.plate, foundData, v.slot)
-                end
-            })
+        if v.name == "rental_paperwork" and v.metadata and v.metadata.plate and v.metadata.rentalLocation == id then
+            local vehicleNetId = checkForMatchedPlate(v.metadata.plate)
+            if vehicleNetId then
+                table.insert(returnMenuOptions, {
+                    title = locale("RentalMenus.ReturnTitle"),
+                    description = locale("RentalMenus.ReturnDescription", v.metadata.plate),
+                    icon = "fa-solid fa-car",
+                    iconColor = "red",
+                    onSelect = function()
+                        local netId = checkForMatchedPlate(v.metadata.plate)
+                        if not netId then return Bridge.Notify.SendNotify(locale("RentalMenus.ReturnNoVehicle"), "error", 3000) end
+
+                        Bridge.VehicleKey.RemoveKeys(NetworkGetEntityFromNetworkId(netId), v.metadata.plate)
+                        TriggerServerEvent("MrNewbVehicleRentals:Server:ReturnVehicle", id, v.metadata.plate, netId, v.slot)
+                    end
+                })
+            end
         end
     end
-    return matchedItems
+
+    return returnMenuOptions
 end
 
 function ManagmentClass:openRentalMenu()
@@ -175,10 +185,11 @@ Bridge.Callback.Register("MrNewbVehicleRentals:Callback:CreateVeh", function(mod
     return data.networkid, GetVehicleNumberPlateText(ent)
 end)
 
-AddEventHandler("community_bridge:Client:OnPlayerUnload", function()
+RegisterNetEvent("community_bridge:Client:OnPlayerUnload", function()
     destroyAll()
 end)
 
-AddEventHandler("community_bridge:Client:OnPlayerLoaded", function()
+RegisterNetEvent("community_bridge:Client:OnPlayerLoaded", function()
     BuildManagmentObjects()
 end)
+-- A lot of the above is some jank shit, it works but I dont like it. Improvments are welcome via prs though
