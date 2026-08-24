@@ -7,7 +7,7 @@
 		"ReturnNoVehicle": "No tienes un vehículo alquilado para devolver.",
 		"ReturnToFar": "Estás demasiado lejos de la estación de alquiler para devolverlo.",
 		"PaperWorkItem": "Documentos de alquiler de %s para un %s con matrícula %s, proporcionados a %s.",
-		"NoSpawn": "No hay espacios libres, por favor muévelos e inténtalo de nuevo.",
-		"NoMoney": "No tienes suficiente dinero para alquilar este vehículo."
+		"NoMoney": "No tienes suficiente dinero para alquilar este vehículo.",
+		"SpawnFailed": "No hay espacios libres, por favor muévelos e inténtalo de nuevo."
 	}
 }

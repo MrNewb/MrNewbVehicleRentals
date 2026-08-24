@@ -7,7 +7,7 @@
 		"ReturnNoVehicle": "Du har ikke et lejet køretøj at aflevere.",
 		"ReturnToFar": "Du er for langt væk fra udlejningsstedet til at aflevere det.",
 		"PaperWorkItem": "Lejepapirer fra %s for en %s med nummerplade %s, udstedt til %s.",
-		"NoSpawn": "Ingen pladser ledige, flyt dem venligst og prøv igen.",
-		"NoMoney": "Du har ikke penge nok til at leje dette køretøj."
+		"NoMoney": "Du har ikke penge nok til at leje dette køretøj.",
+		"SpawnFailed": "Ingen pladser ledige, flyt dem venligst og prøv igen."
 	}
 }

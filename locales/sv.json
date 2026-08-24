@@ -7,7 +7,7 @@
 		"ReturnNoVehicle": "Du har inget hyrt fordon att lämna tillbaka.",
 		"ReturnToFar": "Du är för långt bort från hyrstationen för att lämna tillbaka det.",
 		"PaperWorkItem": "Hyrpapper från %s för en %s med registreringsnummer %s, utfärdade till %s.",
-		"NoSpawn": "Inga lediga platser, flytta dem och försök igen.",
-		"NoMoney": "Du har inte tillräckligt med pengar för att hyra detta fordon."
+		"NoMoney": "Du har inte tillräckligt med pengar för att hyra detta fordon.",
+		"SpawnFailed": "Inga lediga platser, flytta dem och försök igen."
 	}
 }

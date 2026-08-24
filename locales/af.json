@@ -7,7 +7,7 @@
 		"ReturnNoVehicle": "Jy het nie 'n gehuurde voertuig om terug te gee nie.",
 		"ReturnToFar": "Jy is te ver weg van die huurstasie om dit terug te gee.",
 		"PaperWorkItem": "Huurpapierwerk van %s vir 'n %s met nommer %s, verskaf aan %s.",
-		"NoSpawn": "Geen ruimtes beskikbaar nie, skuif hulle asseblief en probeer weer.",
-		"NoMoney": "Jy het nie genoeg geld om hierdie voertuig te huur nie."
+		"NoMoney": "Jy het nie genoeg geld om hierdie voertuig te huur nie.",
+		"SpawnFailed": "Geen ruimtes beskikbaar nie, skuif hulle asseblief en probeer weer."
 	}
 }

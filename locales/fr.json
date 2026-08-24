@@ -7,7 +7,7 @@
 		"ReturnNoVehicle": "Vous n'avez pas de véhicule de location à retourner.",
 		"ReturnToFar": "Vous êtes trop loin de la station de location pour le retourner.",
 		"PaperWorkItem": "Papiers de location de %s pour un %s avec plaque %s, fournis à %s.",
-		"NoSpawn": "Aucun espace libre, veuillez les déplacer et réessayer.",
-		"NoMoney": "Vous n'avez pas assez d'argent pour louer ce véhicule."
+		"NoMoney": "Vous n'avez pas assez d'argent pour louer ce véhicule.",
+		"SpawnFailed": "Aucun espace libre, veuillez les déplacer et réessayer."
 	}
 }

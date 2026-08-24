@@ -1,69 +1,23 @@
-# 🚗 MrNewb Vehicle Rentals
+# MrNewbVehicleRentals
 
-A comprehensive vehicle rental system for FiveM servers featuring cars, boats, and expandable support for any vehicle type. Built with clean architecture utilizing Lua metatables for enhanced code organization and performance.
-![mrnewbvehiclerentals (2)](https://github.com/user-attachments/assets/322ce3b4-e62e-4770-9853-3b3dced93aab)
+Rental desks (peds or props), a `rental_paperwork` item, and nearby returns. Cars, bikes, boats — whatever you put in stock.
 
-## 🌟 Features
+[Documentation](https://mrnewb.github.io/docs/mrnewbvehiclerentals) · [GitHub](https://github.com/MrNewb/MrNewbVehicleRentals) · [Discord](https://discord.gg/mrnewbscripts) · [Preview](https://www.youtube.com/watch?v=uJylvMP8_PY)
 
-- **Multi-Vehicle Support**: Pre-configured for cars and boats, easily expandable for any vehicle type
-- **Flexible Entity System**: Supports both ped NPCs and interactive props/objects
-- **Rental Paperwork**: Includes in-game items with detailed rental information
-- **Dynamic Spawn Points**: Multiple configurable spawn locations for each rental station
-- **Money Integration**: Built-in payment system with configurable prices
-- **Blip System**: Customizable map blips for each rental location
-- **Return System**: Easy vehicle return functionality with distance validation
-- **Localization Support**: Multi-language support system
-- **Clean Architecture**: Built with Lua metatables for organized, maintainable code
+## Install
 
-## 📋 Requirements
+Needs [ox_lib](https://github.com/overextended/ox_lib) and [Newb_Bridge](https://github.com/MrNewb/Newb_Bridge). Framework, inventory, fuel, and vehicle keys come through the bridge.
 
-- **FiveM Server**: Build 6116 or higher
-- **OneSync**: Required for proper synchronization
-- **community_bridge**: Framework dependency
+```cfg
+ensure ox_lib
+ensure Newb_Bridge
+ensure MrNewbVehicleRentals
+```
 
-## 🎮 How to Use
+Add the `rental_paperwork` item and copy `[INSTALL]/images/rental_paperwork.png` into your inventory images folder. Full steps: [docs](https://mrnewb.github.io/docs/mrnewbvehiclerentals/install).
 
-### For Players:
-1. **Find a Rental Station**: Look for rental blips on your map
-2. **Interact**: Walk up to the NPC or prop target to interact
-3. **Select Vehicle**: Choose from available vehicles in the rental menu
-4. **Pay & Drive**: Complete payment and your vehicle will spawn nearby
-5. **Return**: Return to any rental station to return your vehicle
+## Config
 
-### Rental Paperwork Item:
-Players receive rental paperwork items containing:
-- Rental station name
-- Vehicle model and details
-- License plate number
-- Renter information
-- Rental timestamp
+`configs/config.lua` — `Config.Agencies`.
 
-### Entity Types
-
-- **"ped"**: Spawns an interactive NPC
-- **"object"**: Spawns an interactive prop/object
-
-## 📖 Documentation
-
-For detailed installation and configuration instructions, please visit our documentation:
-
-**[Official Documentation](https://mrnewbs-scrips.gitbook.io/guide)**
-
-## 💬 Support
-
-Need help? We're here to assist you!
-
-- **[Discord Server](https://discord.gg/mrnewbscripts)** - Join our community for support and updates
-
-## 🛒 More Scripts
-
-Check out our other premium scripts:
-
-**[MrNewb Scripts Store](https://mrnewbscripts.tebex.io/)**
-
-# Preview
-**[Youtube](https://www.youtube.com/watch?v=uJylvMP8_PY)**
-
----
-
-**Made with ❤️ by MrNewb Scripts**
+Each location key is the desk id (menu title, blip name, paperwork `rentalLocation`). Fields: `coords`, `model`, `stock`, `vehicleSpawn`, `platePrefix`, optional `blip` / `animdata`. `blip.category` (or `Config.BlipCategory`) groups desks under one map legend entry; `Config.BlipCategoryLabel` names custom categories 12–133. `entityType` is optional leftover; ped vs prop comes from `model`.

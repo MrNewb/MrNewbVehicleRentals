@@ -7,7 +7,7 @@
 		"ReturnNoVehicle": "Nemate unajmljeno vozilo za vratiti.",
 		"ReturnToFar": "Predaleko ste od postaje za najam da biste ga vratili.",
 		"PaperWorkItem": "Papiri o najmu od %s za %s s tablicom %s, dostavljeni %s.",
-		"NoSpawn": "Nema slobodnih mjesta, molimo pomaknite ih i pokušajte ponovno.",
-		"NoMoney": "Nemate dovoljno novca za najam ovog vozila."
+		"NoMoney": "Nemate dovoljno novca za najam ovog vozila.",
+		"SpawnFailed": "Nema slobodnih mjesta, molimo pomaknite ih i pokušajte ponovno."
 	}
 }

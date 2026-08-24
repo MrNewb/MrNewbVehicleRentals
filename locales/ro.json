@@ -7,7 +7,7 @@
 		"ReturnNoVehicle": "Nu aveți un vehicul închiriat de returnat.",
 		"ReturnToFar": "Sunteți prea departe de stația de închiriere pentru a-l returna.",
 		"PaperWorkItem": "Documente de închiriere de la %s pentru un %s cu numărul %s, furnizate lui %s.",
-		"NoSpawn": "Nu există spații libere, vă rugăm să le mutați și să încercați din nou.",
-		"NoMoney": "Nu aveți suficienți bani pentru a închiria acest vehicul."
+		"NoMoney": "Nu aveți suficienți bani pentru a închiria acest vehicul.",
+		"SpawnFailed": "Nu există spații libere, vă rugăm să le mutați și să încercați din nou."
 	}
 }

@@ -1,29 +1,41 @@
 fx_version 'cerulean'
 game 'gta5'
 lua54 'yes'
+
+name 'MrNewbVehicleRentals'
 author 'MrNewb'
-description 'A vehicle rental system for FiveM by MrNewb. Utilizing Lua metatables for practice and enhanced code organization.'
-version '0.0.3'
+description 'Vehicle rental locations with paperwork returns built on Newb_Bridge'
+version '1.0.0'
 
 shared_scripts {
-	'core/init.lua',
-	'configs/**/*.lua',
+    '@ox_lib/init.lua',
+    '@Newb_Bridge/import.lua',
+    'configs/config.lua',
+    'resource/shared/utils.lua',
 }
 
 client_scripts {
-	'modules/**/client.lua',
+    'resource/client/rental_menu.lua',
+    'resource/client/rental_desks.lua',
 }
 
 server_scripts {
-	'modules/**/server.lua',
+    'resource/server/rental_transactions.lua',
 }
 
 files {
-	'locales/*.json'
+    'locales/*.json',
 }
 
 dependencies {
-	'/server:6116',
-	'/onesync',
-	'community_bridge'
+    '/server:6116',
+    '/onesync',
+    'ox_lib',
+    'Newb_Bridge',
+}
+
+escrow_ignore {
+    'configs/*.lua',
+    'locales/*.json',
+    'resource/**/*.lua',
 }
