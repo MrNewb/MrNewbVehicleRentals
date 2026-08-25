@@ -5,7 +5,7 @@ lua54 'yes'
 name 'MrNewbVehicleRentals'
 author 'MrNewb'
 description 'Vehicle rental locations with paperwork returns built on Newb_Bridge'
-version '1.0.0'
+version '1.0.1'
 
 shared_scripts {
     '@ox_lib/init.lua',

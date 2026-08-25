@@ -4,10 +4,10 @@
 		"MenuDescription": "Rent a %s for $%s.",
 		"ReturnTitle": "Return Vehicle",
 		"ReturnDescription": "Return your rented vehicle with plate %s.",
-		"ReturnNoVehicle": "You do not have a rented vehicle to return.",
-		"ReturnToFar": "You are too far away from the rental station to return it.",
+		"ReturnNoVehicle": "Nothing here to return.",
+		"ReturnToFar": "Too far from the desk.",
 		"PaperWorkItem": "Rental Paperwork from %s for a %s with plate %s, provided to %s.",
-		"NoMoney": "You do not have enough money to rent this vehicle.",
-		"SpawnFailed": "Unable to rent that vehicle right now, please try again."
+		"NoMoney": "You do not have enough money.",
+		"SpawnFailed": "Couldnt rent that. Try again."
 	}
 }

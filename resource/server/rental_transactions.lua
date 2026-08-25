@@ -38,10 +38,9 @@ RegisterNetEvent('MrNewbVehicleRentals:Server:RentVehicle', function(deskName, v
     local renterIdentifier = bridge.framework.getIdentifier(src)
     if not renterIdentifier then return end
 
-    if (tonumber(bridge.framework.getMoney(src, 'bank')) or 0) < rentalPrice then
-        bridge.notifications.notify(src, { description = locale('RentalMenus.NoMoney'), type = 'error', duration = 3000 })
-        return
-    end
+    local playerMoney = tonumber(bridge.framework.getMoney(src, 'bank')) or 0
+    if playerMoney < 0 then return bridge.notifications.notify(src, { description = locale('RentalMenus.NoMoney'), type = 'error', duration = 3000 }) end
+    if playerMoney < rentalPrice then return bridge.notifications.notify(src, { description = locale('RentalMenus.NoMoney'), type = 'error', duration = 3000 }) end
 
     if not bridge.inventory.canCarryItem(src, 'rental_paperwork', 1) then return end
 
