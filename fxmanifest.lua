@@ -5,22 +5,22 @@ lua54 'yes'
 name 'MrNewbVehicleRentals'
 author 'MrNewb'
 description 'Vehicle rental locations with paperwork returns built on Newb_Bridge'
-version '1.0.1'
+version '1.0.2'
 
 shared_scripts {
     '@ox_lib/init.lua',
     '@Newb_Bridge/import.lua',
-    'configs/config.lua',
-    'resource/shared/utils.lua',
+    'resource/open/shared/config.lua',
+    'resource/modules/core/shared/utils.lua',
 }
 
 client_scripts {
-    'resource/client/rental_menu.lua',
-    'resource/client/rental_desks.lua',
+    'resource/modules/rentals/client/rental_menu.lua',
+    'resource/modules/rentals/client/rental_desks.lua',
 }
 
 server_scripts {
-    'resource/server/rental_transactions.lua',
+    'resource/modules/rentals/server/rental_transactions.lua',
 }
 
 files {
@@ -35,7 +35,5 @@ dependencies {
 }
 
 escrow_ignore {
-    'configs/*.lua',
-    'locales/*.json',
-    'resource/**/*.lua',
+    '**/*',
 }

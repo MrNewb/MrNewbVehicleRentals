@@ -25,7 +25,7 @@ for deskName, deskConfig in pairs(Config.Agencies or {}) do
     }
 end
 
-RegisterNetEvent('MrNewbVehicleRentals:Server:RentVehicle', function(deskName, vehicleModel)
+RegisterNetEvent('MrNewbVehicleRentals:server:rentedVehicle', function(deskName, vehicleModel)
     local src = source
     local desk = getDeskIfPlayerIsClose(src, deskName)
     if not desk then return end
@@ -59,7 +59,7 @@ RegisterNetEvent('MrNewbVehicleRentals:Server:RentVehicle', function(deskName, v
     Wait(500)
     if rentalVehicle == 0 or not DoesEntityExist(rentalVehicle) or GetEntityModel(rentalVehicle) ~= joaat(vehicleModel) then
         bridge.notifications.notify(src, { description = locale('RentalMenus.SpawnFailed'), type = 'error', duration = 3000 })
-        TriggerClientEvent('MrNewbVehicleRentals:Client:DeleteVehicle', src, vehicleNetworkId)
+        TriggerClientEvent('MrNewbVehicleRentals:client:removedRentalVehicle', src, vehicleNetworkId)
         return
     end
 
@@ -114,7 +114,7 @@ RegisterNetEvent('MrNewbVehicleRentals:Server:RentVehicle', function(deskName, v
     end
 end)
 
-RegisterNetEvent('MrNewbVehicleRentals:Server:ReturnVehicle', function(deskName, licensePlate, inventorySlot)
+RegisterNetEvent('MrNewbVehicleRentals:server:returnedVehicle', function(deskName, licensePlate, inventorySlot)
     local src = source
     local desk, reason = getDeskIfPlayerIsClose(src, deskName)
     if not desk then
@@ -155,16 +155,32 @@ RegisterNetEvent('MrNewbVehicleRentals:Server:ReturnVehicle', function(deskName,
     rentalsByPlate[licensePlate] = nil
 end)
 
+local function removePaperworkForPlate(src, licensePlate)
+    for _, item in pairs(bridge.inventory.getInventoryItems(src) or {}) do
+        if item.name == 'rental_paperwork' and item.metadata and item.metadata.plate == licensePlate then
+            return bridge.inventory.removeItem(src, 'rental_paperwork', 1, nil, item.slot)
+        end
+    end
+end
+
 AddEventHandler('onResourceStop', function(resourceName)
-    if GetCurrentResourceName() ~= resourceName then return end
-    for _, rental in pairs(rentalsByPlate) do
+    if cache.resource ~= resourceName then return end
+    for licensePlate, rental in pairs(rentalsByPlate) do
+        local src = bridge.framework.getSrcFromIdentifier(rental.renter)
         local vehicle = NetworkGetEntityFromNetworkId(rental.vehicleNetworkId)
+        if src then
+            removePaperworkForPlate(src, licensePlate)
+            bridge.framework.addMoney(src, 'bank', rental.price, 'vehicle_rental_return')
+            if vehicle ~= 0 and DoesEntityExist(vehicle) then
+                bridge.vehiclekeys.remove(src, vehicle, licensePlate)
+            end
+        end
         if vehicle ~= 0 and DoesEntityExist(vehicle) then DeleteEntity(vehicle) end
     end
     rentalsByPlate = {}
 end)
 
 AddEventHandler('onResourceStart', function(resourceName)
-    if GetCurrentResourceName() ~= resourceName then return end
+    if cache.resource ~= resourceName then return end
     exports[bridge.name]:VersionCheck('MrNewb/patchnotes', resourceName)
 end)

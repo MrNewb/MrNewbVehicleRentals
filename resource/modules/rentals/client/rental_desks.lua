@@ -4,10 +4,10 @@ local blipCategoryLabeled = false
 
 local function ensureBlipCategoryLabel(category)
     if blipCategoryLabeled then return end
-    if type(category) ~= 'number' or category < 12 or category > 133 then return end
+    if category < 12 or category > 133 then return end
 
     local label = Config.BlipCategoryLabel
-    if type(label) ~= 'string' or label == '' then return end
+    if not label or label == '' then return end
 
     AddTextEntry('BLIP_CAT_' .. category, label)
     blipCategoryLabeled = true
@@ -21,7 +21,7 @@ local function createDeskBlip(coords, blipData, deskName)
     SetBlipAsShortRange(blip, true)
 
     local category = blipData.category or Config.BlipCategory
-    if type(category) == 'number' then
+    if category then
         ensureBlipCategoryLabel(category)
         SetBlipCategory(blip, category)
     end
@@ -59,7 +59,7 @@ end
 local function spawnRentalDesks()
     for deskName, desk in pairs(Config.Agencies or {}) do
         if spawnedDesks[deskName] then return end
-        if type(deskName) ~= 'string' or type(desk) ~= 'table' or not desk.coords then return end
+        if not desk.coords then return end
 
         if desk.blip then
             deskBlips[deskName] = createDeskBlip(desk.coords, desk.blip, deskName)
@@ -83,11 +83,11 @@ local function removeRentalDesks()
     end
 end
 
-AddEventHandler('Newb_Bridge:client:playerLoad', spawnRentalDesks)
-AddEventHandler('Newb_Bridge:client:playerUnload', removeRentalDesks)
+AddEventHandler('Newb_Bridge:client:playerLoaded', spawnRentalDesks)
+AddEventHandler('Newb_Bridge:client:playerUnloaded', removeRentalDesks)
 
 AddEventHandler('onResourceStop', function(resourceName)
-    if GetCurrentResourceName() ~= resourceName then return end
+    if cache.resource ~= resourceName then return end
     removeRentalDesks()
 end)
 

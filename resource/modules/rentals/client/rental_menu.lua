@@ -65,7 +65,7 @@ lib.callback.register('MrNewbVehicleRentals:Callback:CreateVehicle', function(ve
     return NetworkGetNetworkIdFromEntity(vehicle), licensePlate
 end)
 
-RegisterNetEvent('MrNewbVehicleRentals:Client:DeleteVehicle', function(vehicleNetworkId)
+RegisterNetEvent('MrNewbVehicleRentals:client:removedRentalVehicle', function(vehicleNetworkId)
     if source ~= 65535 then return end
     if type(vehicleNetworkId) ~= 'number' or vehicleNetworkId == 0 then return end
     local vehicle = NetworkGetEntityFromNetworkId(vehicleNetworkId)
@@ -92,7 +92,7 @@ function OpenRentalMenu(deskName)
             icon = 'fa-solid fa-car',
             iconColor = 'orange',
             onSelect = function()
-                TriggerServerEvent('MrNewbVehicleRentals:Server:RentVehicle', deskName, vehicleForRent.model)
+                TriggerServerEvent('MrNewbVehicleRentals:server:rentedVehicle', deskName, vehicleForRent.model)
             end,
         }
     end
@@ -110,7 +110,7 @@ function OpenRentalMenu(deskName)
                     icon = 'fa-solid fa-car',
                     iconColor = 'red',
                     onSelect = function()
-                        TriggerServerEvent('MrNewbVehicleRentals:Server:ReturnVehicle', deskName, paperwork.plate, inventoryItem.slot)
+                        TriggerServerEvent('MrNewbVehicleRentals:server:returnedVehicle', deskName, paperwork.plate, inventoryItem.slot)
                     end,
                 }
             end

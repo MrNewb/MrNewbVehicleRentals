@@ -4,6 +4,8 @@ Rental desks (peds or props), a `rental_paperwork` item, and nearby returns. Car
 
 [Documentation](https://mrnewb.github.io/docs/mrnewbvehiclerentals) · [Install guide](https://mrnewb.github.io/docs/mrnewbvehiclerentals/install) · [Tebex](https://mrnewbscripts.tebex.io/) · [Discord](https://discord.gg/mrnewbscripts) · [Preview](https://www.youtube.com/watch?v=uJylvMP8_PY)
 
+Documentation is available at https://mrnewb.github.io/docs/
+
 [![MrNewbVehicleRentals preview](https://img.youtube.com/vi/uJylvMP8_PY/hqdefault.jpg)](https://www.youtube.com/watch?v=uJylvMP8_PY)
 
 ## Features
@@ -31,7 +33,7 @@ Add the `rental_paperwork` item. Copy `[INSTALL]/images/rental_paperwork.png` in
 
 ## Config
 
-`configs/config.lua` — `Config.Agencies`. Each location key is the desk id (menu title, blip name, paperwork location). Fields: `coords`, `model`, `stock`, `vehicleSpawn`, `platePrefix`, optional `blip` / `animdata`.
+`resource/open/shared/config.lua` — `Config.Agencies`. Each location key is the desk id (menu title, blip name, paperwork location). Fields: `coords`, `model`, `stock`, `vehicleSpawn`, `platePrefix`, optional `blip` / `animdata`.
 
 `Config.BlipCategory` / `Config.BlipCategoryLabel` group desks under one map legend entry.
 
