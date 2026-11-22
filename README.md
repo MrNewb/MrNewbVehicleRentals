@@ -1,12 +1,15 @@
 # MrNewbVehicleRentals
 
+![MrNewbVehicleRentals](.github/assets/banner.webp)
+
 Rental desks (peds or props), a `rental_paperwork` item, and nearby returns. Cars, bikes, boats — whatever you put in stock.
 
-[Documentation](https://mrnewb.github.io/docs/mrnewbvehiclerentals) · [Install guide](https://mrnewb.github.io/docs/mrnewbvehiclerentals/install) · [Tebex](https://mrnewbscripts.tebex.io/) · [Discord](https://discord.gg/mrnewbscripts) · [Preview](https://www.youtube.com/watch?v=uJylvMP8_PY)
+[Documentation](https://mrnewb.github.io/docs/mrnewbvehiclerentals) · [Install guide](https://mrnewb.github.io/docs/mrnewbvehiclerentals/install) · [Tebex](https://mrnewbscripts.tebex.io/) · [Discord](https://discord.gg/mrnewbscripts) · [Short](https://www.youtube.com/shorts/xD9SaaADWsw)
+
+<a href="https://www.youtube.com/shorts/xD9SaaADWsw"><img src=".github/assets/short.webp" alt="MrNewbVehicleRentals on YouTube Shorts" width="200"></a>
 
 Documentation is available at https://mrnewb.github.io/docs/
 
-[![MrNewbVehicleRentals preview](https://img.youtube.com/vi/uJylvMP8_PY/hqdefault.jpg)](https://www.youtube.com/watch?v=uJylvMP8_PY)
 
 ## Features
 
